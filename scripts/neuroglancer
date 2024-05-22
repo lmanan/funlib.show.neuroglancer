@@ -167,8 +167,8 @@ for f, datasets in zip(args.file, args.datasets):
             arrays.append(a)
 
     with viewer.txn() as s:
-        for array, dataset in arrays:
-            add_layer(s, array, dataset)
+        for array, dataset_name in arrays:
+            add_layer(s, array, dataset_name)
 
 if args.graphs:
     for f, graphs in zip(args.file, args.graphs):
