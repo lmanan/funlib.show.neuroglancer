@@ -186,10 +186,7 @@ def create_shader_code(
 ):
 
     if shader is None:
-        if (
-            name in ["embeddings", "centered-embeddings", "centered_embeddings"]
-            or name[-10:] == "prediction"
-        ):
+        if 'embeddings' in name:
             shader = "embeddings"
         else:
             if channel_dims > 1:
